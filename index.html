@@ -455,6 +455,9 @@ button.outcome-row[aria-expanded="true"] .outcome-chevron{transform:rotate(180de
 .insight-logo-icon{width:18px;height:18px;display:block;object-fit:contain}
 .insight-text{font-size:12.5px;font-weight:500;color:var(--d300);line-height:1.55}
 .insight-text strong{color:var(--teal);font-weight:700}
+.qa-full-link{display:inline-flex;align-items:center;gap:7px;margin-top:16px;font-size:12.5px;font-weight:600;color:var(--brand);text-decoration:none}
+.qa-full-link:hover{text-decoration:underline}
+.qa-full-link svg{width:13px;height:13px;flex-shrink:0}
 .reason-row{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid var(--card-border)}
 .reason-row:last-child{border-bottom:none}
 .reason-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
@@ -895,7 +898,7 @@ button.aimy-float-icon{cursor:pointer}
       <div class="stat-card" data-modal="performanceModal">
         <div class="stat-card-inner">
           <div>
-            <div class="stat-label">Performance Analysis</div>
+            <div class="stat-label">AiMY QA</div>
             <div class="stat-value skel">3,636<span class="stat-unit" style="margin-left:7px">analysed</span></div>
             <div class="stat-delta neutral"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2.5 8h11"/></svg>94.7% <span class="stat-delta-label">of 3,840 calls handled</span></div>
             <div class="stat-sub">92.3% identified · 98.2% data captured</div>
@@ -1088,13 +1091,13 @@ button.aimy-float-icon{cursor:pointer}
 
       <!-- Handoff volume and wait sit here because both are known from the call
            record. Whether a handoff went to the right team is a review judgement,
-           so it is on the Performance Analysis card instead. -->
+           so it is on the AiMY QA card instead. -->
       <div class="modal-section"><div class="modal-section-title">Handoffs <span class="mst-base">of all 3,840 calls</span></div>
         <div class="modal-grid-2" style="margin-bottom:14px">
           <div class="m-stat"><div class="m-stat-value">1,690</div><div class="m-stat-label">handoffs</div><div class="m-stat-delta neutral">44.0% of calls handled</div></div>
           <div class="m-stat"><div class="m-stat-value">38s</div><div class="m-stat-label">avg wait to connect</div></div>
         </div>
-        <div class="ident-note" style="margin-top:10px">Every call handed straight to a person: 486 L1 scope, 224 handed over after troubleshooting, and the 980 who asked for one. Whether each went to the right team is on the Performance Analysis card.</div>
+        <div class="ident-note" style="margin-top:10px">Every call handed straight to a person: 486 L1 scope, 224 handed over after troubleshooting, and the 980 who asked for one. Whether each went to the right team is on the AiMY QA card.</div>
       </div>
 
       <div class="insight-banner"><div class="insight-aimark"><svg class="insight-logo-icon" viewBox="0 0 152 148" aria-hidden="true"><use href="#aimy-mark"/></svg></div><div class="insight-text"><strong>The +8% rise is sustained, not a spike.</strong> Every week of the month came in above the equivalent week last period, with the largest gain on Fridays (+13%).</div></div>
@@ -1137,9 +1140,9 @@ button.aimy-float-icon{cursor:pointer}
   <div class="modal">
     <div class="modal-header">
       <div class="modal-title-group">
-        <span class="modal-title">Performance Analysis</span>
+        <span class="modal-title">AiMY QA</span>
       </div>
-      <button class="modal-close" aria-label="Close Performance Analysis"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4l8 8M12 4l-8 8"/></svg></button>
+      <button class="modal-close" aria-label="Close AiMY QA"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4l8 8M12 4l-8 8"/></svg></button>
     </div>
     <div class="modal-body">
       <!-- Everything on this card needs a call to have been analysed first, so
@@ -1152,7 +1155,7 @@ button.aimy-float-icon{cursor:pointer}
         <div class="m-stat"><div class="m-stat-value">87.2%</div><div class="m-stat-label">problem identified</div><div class="m-stat-delta neutral">2,612 of 2,995</div></div>
         <div class="m-stat"><div class="m-stat-value">48.0%</div><div class="m-stat-label">resolved by troubleshooting</div><div class="m-stat-delta neutral">1,438 of 2,995</div></div>
       </div>
-      <div class="ident-note" style="margin-top:12px"><strong>Analysed calls only</strong> — 3,636 of 3,840. The rest join as their analysis completes, so these numbers can still move. Volume, outcomes and handoffs never wait on analysis; those are final, on the Calls Handled card.</div>
+      <div class="ident-note" style="margin-top:12px">Numbers could be less than the actual calls handled as some of them are still under processing.</div>
       </div>
 
       <!-- Process stages, in the order AiMY runs them. All four divide the 2,995
@@ -1195,7 +1198,6 @@ button.aimy-float-icon{cursor:pointer}
             <div class="bk-row"><span class="bk-label">Name recalled</span><div class="bk-bar-wrap"><div class="bk-bar" style="width:87.0%"></div></div><span class="bk-val">1,489</span><span class="bk-pct">87%</span></div>
             <div class="bk-row"><span class="bk-label">Office confirmed</span><div class="bk-bar-wrap"><div class="bk-bar" style="width:70.3%"></div></div><span class="bk-val">1,204</span><span class="bk-pct">70%</span></div>
             <div class="bk-row"><span class="bk-label">Title applied</span><div class="bk-bar-wrap"><div class="bk-bar" style="width:22.5%"></div></div><span class="bk-val">386</span><span class="bk-pct">23%</span></div>
-            <div class="ident-note" style="margin-top:10px">Of the <strong>1,712</strong> callers <span class="brand-name">AiMY</span> already knew. Coverage, not a score — there is nothing to recall for a caller it is meeting for the first time.</div>
           </div>
           <div>
             <div class="ident-block">
@@ -1218,7 +1220,6 @@ button.aimy-float-icon{cursor:pointer}
               <div class="ident-track"><div class="ident-fill" style="width:7.5%;background:var(--d600)"></div></div>
               <div class="ident-meta"><span><strong>224</strong> matched an open ticket</span><span><strong>2,771</strong> new issue</span></div>
             </div>
-            <div class="ident-note" style="margin-top:10px">Coverage, not a score. A match means AiMY updated the ticket that already existed for this customer on this problem, instead of opening a duplicate.</div>
           </div>
           <div>
             <div class="ident-block">
@@ -1257,33 +1258,17 @@ button.aimy-float-icon{cursor:pointer}
                  escalated: the question is whether AiMY had a procedure for the
                  problem at all, which every end-to-end call can be judged on. -->
             <div class="ident-block" style="margin-top:16px">
-              <div class="ident-head"><span class="ident-name">Procedure available</span><span class="ident-value">90.9%</span></div>
+              <div class="ident-head"><span class="ident-name">Knowledge Available</span><span class="ident-value">90.9%</span></div>
               <div class="ident-track"><div class="ident-fill" style="width:90.9%"></div></div>
-              <div class="ident-meta"><span><strong>2,722</strong> had a procedure</span><span><strong>273</strong> knowledge gap</span></div>
+              <div class="ident-meta"><span><strong>2,722</strong> had knowledge</span><span><strong>273</strong> knowledge gap</span></div>
             </div>
-            <div class="ident-note" style="margin-top:10px">A knowledge gap is the addressable failure on this card: <span class="brand-name">AiMY</span> named the problem correctly and had no procedure for it. Closing all 273 would take troubleshooting from 48.0% resolved to 57.1%.</div>
           </div>
           <div>
-            <div class="ident-note"><span class="ident-step">5</span>Resolution and handoff is the last stage — it is the Outcomes section at the top of this modal.</div>
+            <div class="ident-note"><span class="ident-step">5</span>Resolution and handoff</div>
             <div class="modal-section-title" style="margin-top:16px">Resolution quality</div>
             <div class="reason-row"><div class="reason-dot" style="background:var(--ok)"></div><span class="reason-label">Resolution confirmed with the caller</span><span class="reason-count">1,301</span><span class="reason-pct">90%</span></div>
           </div>
         </div>
-      </div>
-
-      <!-- Data capture is a property of a call, not an outcome of one: a call can
-           be an L1-scope handoff and still have a gap in what was captured. It divides
-           the 3,636 analysed, not the 2,995 end to end, so it gets its own section
-           rather than a step number in the process above. -->
-      <div class="modal-section"><div class="modal-section-title">Data captured <span class="mst-base">of 3,636 analysed calls</span></div>
-        <div class="ident-block">
-          <div class="ident-head"><span class="ident-name">Complete data captured</span><span class="ident-value">98.2%</span></div>
-          <div class="ident-track"><div class="ident-fill" style="width:98.2%"></div></div>
-          <div class="ident-meta"><span><strong>3,571</strong> complete</span><span><strong>65</strong> with a gap</span></div>
-        </div>
-        <div class="modal-section-title" style="margin-top:16px">Where the gap was</div>
-        <div class="reason-row"><div class="reason-dot" style="background:var(--err)"></div><span class="reason-label">Detail missing</span><span class="reason-count">39</span><span class="reason-pct">60%</span></div>
-        <div class="reason-row"><div class="reason-dot" style="background:var(--d600)"></div><span class="reason-label">Multiple issues</span><span class="reason-count">26</span><span class="reason-pct">40%</span></div>
       </div>
 
       <!-- Only the routing judgement stays here: whether a handoff went to the
@@ -1292,10 +1277,10 @@ button.aimy-float-icon{cursor:pointer}
       <div class="modal-section"><div class="modal-section-title">Handoff quality <span class="mst-base">of the 1,470 handoffs analysed</span></div>
         <div class="reason-row"><div class="reason-dot" style="background:var(--ok)"></div><span class="reason-label">Routed to the correct team</span><span class="reason-count">1,382</span><span class="reason-pct">94%</span></div>
         <div class="reason-row"><div class="reason-dot" style="background:var(--err)"></div><span class="reason-label">Routed to the wrong team</span><span class="reason-count">88</span><span class="reason-pct">6%</span></div>
-        <div class="ident-note" style="margin-top:10px">Handoff volume and wait to connect are on the Calls Handled card — they are known the moment a call ends.</div>
       </div>
 
       <div class="insight-banner"><div class="insight-aimark"><svg class="insight-logo-icon" viewBox="0 0 152 148" aria-hidden="true"><use href="#aimy-mark"/></svg></div><div class="insight-text"><strong>Troubleshooting resolves just under half of what it takes on — the other 1,557 calls go to a person.</strong> Most of that is scope rather than failure: 872 escalations were L1 or L2 work AiMY was never meant to do, and 412 were callers asking for a person mid call. The 273 knowledge gaps are the ones to act on, because AiMY named the problem correctly and had no procedure for it. Closing those alone would take 48.0% resolved to 57.1%.</div></div>
+      <a class="qa-full-link" href="#" target="_blank" rel="noopener">Show full details in AiMY QA<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.5 3.5H3.5v9h9v-3M9.5 3.5h3v3M12.5 3.5L7.5 8.5"/></svg></a>
     </div>
   </div>
 </div>
@@ -2079,12 +2064,12 @@ function ansGaps(){
   return '<b>1,142</b> of the 3,840 calls did not end in success. Four things account for all of them, and they are not the same kind of problem.'
     +rows([['Human requested before AiMY engaged','537 · 14.0%'],['L2 scope','323 · 8.4%'],['Timed out','153 · 4.0%'],['Out of scope','129 · 3.4%']])
     +'<br>The largest single one is not AiMY failing at anything — 537 callers asked for a person before it had a turn. After that, scope is <b>452</b> calls combined and L2 is most of it, working as intended: all 323 had a diagnosis captured and a specialist queue assigned, 295 carried evidence and 260 were picked up.'
-    +note('The genuinely addressable ones are out of scope (73 outside the known catalogue, 56 no system access) and the 153 timeouts, over half of which are silence — 57 no speech detected, 44 silent after the greeting. Data capture is not in this list: a gap there is a quality problem on a call that still had an outcome, and it sits on the Performance Analysis card.');
+    +note('The genuinely addressable ones are out of scope (73 outside the known catalogue, 56 no system access) and the 153 timeouts, over half of which are silence — 57 no speech detected, 44 silent after the greeting. Data capture is not in this list: a gap there is a quality problem on a call that still had an outcome, and it sits on the AiMY QA card.');
 }
 function ansHandoffs(){
   return '<b>1,690</b> handoffs, <b>44.0%</b> of the 3,840 calls handled, averaging <b>38s</b> to connect — 486 L1 scope, 224 handed over after troubleshooting, and the 980 who asked for a person.'
     +rows([['Asked before AiMY engaged','537 · 55%'],['Asked for an agent or department','167 · 17%'],['Asked for a supervisor','107 · 11%'],['Declined automation','102 · 10%']])
-    +note('A handoff is not a failure — 1,153 of them count toward the success rate, the ones where AiMY had identified the problem before handing over. Whether each went to the right team needs the call analysed, so that sits on the Performance Analysis card: 94% of the 1,470 analysed so far.');
+    +note('A handoff is not a failure — 1,153 of them count toward the success rate, the ones where AiMY had identified the problem before handing over. Whether each went to the right team needs the call analysed, so that sits on the AiMY QA card: 94% of the 1,470 analysed so far.');
 }
 function ansIdentification(){
   return 'Customer identified on <b>92.3%</b> of calls — <b>2,764</b> of the 2,995 AiMY took end to end, with <b>231</b> unidentified. The problem was identified on <b>87.2%</b>.'
